@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.min.js">
+</script>
+<script>
+//we are reusing this URL, somove it to a variable
+base_url="http://localhost:5100/rest/books/";
+$(document).ready(function(){
+    $.getJSON(base_url,function(data){
+    	console.log(data);
+    	$.each( data, function( count, object ) { 
+    			return data.title;
+    		}
+    	});
+    });
+</script>
+</head>
+<body>
+<h1 style="text-align:center;">search result for finding a review</h1>
+<div class="books_list"></div>
+</body>
+</html>
