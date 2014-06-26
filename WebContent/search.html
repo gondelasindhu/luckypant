@@ -19,7 +19,7 @@ $(document).ready(function(){
     function searchdata(isbn){
         $.ajax({
                 type: "GET",
-                url:"http://infinite-reaches-7046.herokuapp.com/search.html"+isbn,
+                url:"http://localhost:5100/rest/books/"+isbn,
                 success: function (data, status, jqXHR) {
                // alert( data.author+" "+ data.title+" "+ data.isbn+" "+ data.review);  
                 //window.location.href = "review.html";
@@ -28,8 +28,9 @@ $(document).ready(function(){
                 },
                 error: function (jqXHR, status) {
                     console.log(jqXHR);
-                    alert('failed, please check console for errors');
+                    alert('book not found...!!! please enter a valid ISBN::?????');
                 }
+                
              });
        }
 });
