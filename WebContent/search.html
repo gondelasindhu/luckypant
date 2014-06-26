@@ -19,7 +19,7 @@ $(document).ready(function(){
     function searchdata(isbn){
         $.ajax({
                 type: "GET",
-                url:"http://localhost:5100/rest/books/"+isbn,
+                url:"/rest/books/"+isbn,
                 success: function (data, status, jqXHR) {
                // alert( data.author+" "+ data.title+" "+ data.isbn+" "+ data.review);  
                 //window.location.href = "review.html";
