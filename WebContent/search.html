@@ -19,7 +19,7 @@ $(document).ready(function(){
     function searchdata(isbn){
         $.ajax({
                 type: "GET",
-                url:"/rest/books/"+isbn,
+                url:"http://infinite-reaches-7046.herokuapp.com/search.html"+isbn,
                 success: function (data, status, jqXHR) {
                // alert( data.author+" "+ data.title+" "+ data.isbn+" "+ data.review);  
                 //window.location.href = "review.html";
